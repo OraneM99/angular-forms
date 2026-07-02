@@ -1,0 +1,39 @@
+<form (submit)="onSubmit($event)">
+  <label>
+    Prénom
+    <input type="text" [formField]="registerForm.firstName" />
+    @if (registerForm.firstName().touched() && !registerForm.firstName().valid()) {
+      <p class="error">{{ registerForm.firstName().errors()[0]?.message }}</p>
+    }
+  </label>
+  <label>
+    Nom
+    <input type="text" [formField]="registerForm.lastName" />
+    @if (registerForm.lastName().touched() && !registerForm.lastName().valid()) {
+      <p class="error">{{ registerForm.lastName().errors()[0]?.message }}</p>
+    }
+  </label>
+  <label>
+    Âge
+    <input type="number" [formField]="registerForm.age" />
+    @if (registerForm.age().touched() && !registerForm.age().valid()) {
+      <p class="error">{{ registerForm.age().errors()[0]?.message }}</p>
+    }
+  </label>
+  <label>
+    Email
+    <input type="email" [formField]="registerForm.email" />
+    @if (registerForm.email().touched() && !registerForm.email().valid()) {
+      <p class="error">{{ registerForm.email().errors()[0]?.message }}</p>
+    }
+  </label>
+  <label>
+    Mot de passe
+    <input type="password" [formField]="registerForm.password" />
+    @if (registerForm.password().touched() && !registerForm.password().valid()) {
+      <p class="error">{{ registerForm.password().errors()[0]?.message }}</p>
+    }
+  </label>
+
+  <button type="submit">S'inscrire</button>
+</form>
