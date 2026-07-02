@@ -10,50 +10,21 @@ To start a local development server, run:
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Le formulaire devra permettre de recueillir :
 
-## Code scaffolding
+- le prénom
+- le nom
+- l'âge
+- l'adresse email
+- le mot de passe
+La fonction de soumission du formulaire on ne fera qu'un console.log() des données recueillies.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Créer une validation sur l'âge de la personne.
+L'âge devra être supérieur ou égal à 18 ans.
+Si l'âge est inférieur à 18, un message d'erreur doit apparaître dans le formulaire.
 
-```bash
-ng generate component component-name
-```
+Ajouter également :
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- une validation pour vérifier que les champs obligatoires ne sont pas vides
+- une validation pour vérifier que l'email est valide
+-une validation pour vérifier que le mot de passe contient au moins 8 caractères.
